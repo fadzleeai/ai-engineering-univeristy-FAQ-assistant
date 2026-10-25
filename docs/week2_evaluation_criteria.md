@@ -1,0 +1,9 @@
+# Evaluation Criteria Table — UniAssist
+
+| Objective / Requirement ID | Evaluation Criterion | Capability Bucket | Measurement Method | Metric | Threshold | User / Business Outcome |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **O3 / NFR1 / FR1** | Answer Correctness | Domain-specific capability | Evaluate a defined test set of UTM academic and administrative queries using a grading rubric. | Correct response rate | $\ge80\%$ | Users receive reliable and accurate answers for routine academic enquiries, reducing confusion. |
+| **O2 / O3 / FR2 / RAI1** | Source Citation and Grounding | Instruction-following capability | Inspect responses for citation presence and verify whether the cited UTM sources actually support the generated answer. | Citation presence rate; citation-source match rate | 100% citation presence; $\ge95\%$ citation-source match | Students can easily verify the information against official university sources, building trust in the system. |
+| **O2 / RAI3** | Ambiguity and Conflict Refusal | Instruction-following capability | Test the system with a defined set of contradictory, out-of-scope, or unanswerable queries based on the provided documents. | Refusal-and-redirect success rate | $\ge95\%$ | Reduces the risk of students acting on inappropriate, outdated, or hallucinated academic advice. |
+| **O1 / NFR3** | Response Latency | Cost and latency | Measure end-to-end response time across the evaluation test workload. | p90 latency | < 3,000 ms | Users experience a sufficiently responsive interaction, encouraging adoption of the tool. |
+| **O1 / RAI2** | Data Privacy Protection | Instruction-following capability | Run privacy test cases containing mock student PII and inspect outgoing model/API payloads. | Number of detected PII transmissions | 0 | Ensures student privacy is maintained and the system complies with data security expectations. |
